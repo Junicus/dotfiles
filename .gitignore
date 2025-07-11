@@ -1,5 +1,6 @@
 .DS_Store
-tmux/plugins/
 raycast
 fzf
 history.txt
+.tmux/plugins
+.config/nvim/undodir
