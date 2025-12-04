@@ -118,3 +118,9 @@ export LANGUAGE="en_US.UTF-8"
 export EDITOR=nvim
 
 eval "$(starship init bash)"
+
+# Autostart Tmux session if not already attached
+if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
+  tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+  exit
+fi
