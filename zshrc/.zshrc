@@ -19,4 +19,4 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 alias ls="eza --icons=always"
 
 eval "$(zoxide init zsh)"
-alias cd="z"
+# alias cd="z"
