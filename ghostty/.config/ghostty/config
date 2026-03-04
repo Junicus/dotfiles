@@ -1,0 +1,11 @@
+shell-integration-features = no-cursor,sudo,no-title,ssh-env,ssh-terminfo
+copy-on-select = clipboard
+window-colorspace = display-p3
+window-theme = system
+background-opacity = 0.96
+background-blur = 20
+theme = Dracula
+bold-is-bright = true
+font-size = 15
+adjust-cell-height = 35%
+mouse-scroll-multiplier = 2
