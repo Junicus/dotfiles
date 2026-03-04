@@ -17,7 +17,7 @@ version = 4
   alignment = 'left'
 
   [[blocks.segments]]
-    template = '{{ .UserName }} '
+    template = '{{ .UserName }}@{{ .HostName }} '
     foreground = '#BF616A'
     type = 'session'
     style = 'plain'
