@@ -1,5 +1,6 @@
-require("junicus.core")
-require("junicus.lazy")
-require("junicus.lsp")
+require("vim._core.ui2").enable({})
 
-vim.cmd "colorscheme tokyonight-night"
+require("options")
+require("keymaps")
+require("commands")
+require("pack")
