@@ -88,3 +88,26 @@ eval "$(zoxide init --cmd cd zsh)"
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config ~/.config/junicus.omp.toml)"
 fi
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/junicus/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# Added by get-aspire-cli.sh
+export PATH="$HOME/.aspire/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/junicus/.lmstudio/bin"
+# End of LM Studio CLI section
+
+if [[ -z "$TMUX" ]]; then
+  last_session=$(tmux list-sessions 2>/dev/null | grep -v attached | tail -n1 | cut -d: -f1)
+
+  if [[ -n "$last_session" ]]; then
+    tmux attach-session -t "$last_session"
+  else
+    tmux new -s main
+  fi
+fi
+
