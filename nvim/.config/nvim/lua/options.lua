@@ -1,46 +1,45 @@
-vim.g.netrw_banner = 0
+vim.loader.enable()
 
-vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.g.have_nerd_font = true
 
-vim.opt.wrap = false
-vim.opt.smartindent = true
-vim.opt.inccommand = "split"
-vim.opt.incsearch = true
+vim.o.number = true
+vim.o.mouse = "a"
+vim.o.showmode = false
 
-vim.opt.splitbelow = true
-vim.opt.splitright = true
+vim.schedule(function() vim.o.clipboard = "unnamedplus" end)
 
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.laststatus = 3
+vim.o.breakindent = true
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
-vim.opt.undofile = true
+vim.o.undofile = true
 
-vim.opt.clipboard:append("unnamedplus")
-vim.opt.isfname:append("@-@")
-vim.opt.guicursor = ""
-vim.opt.winborder = "rounded"
-vim.opt.scrolloff = 8
+vim.o.ignorecase = true
+vim.o.smartcase = ture
 
-vim.opt.colorcolumn = "0"
-vim.opt.signcolumn = "yes"
-vim.o.cmdheight = 0
-vim.opt.termguicolors = true
+vim.o.expandtab = true -- use spaces instead of tabs
+vim.o.shiftwidth = 2 -- indent size
+vim.o.tabstop = 2 -- tab character width
+vim.o.shiftround = true -- round indent to nearest multiple of shiftwidth
+vim.o.smartindent = true -- auto-indent new lines intelligently
 
-vim.opt.autocomplete = true
+vim.o.signcolumn = "yes"
 
-vim.api.nvim_create_autocmd("TextYankPost", {
-    desc = "Highlight when yanking (copying) text",
-    callback = function()
-        vim.hl.on_yank()
-    end,
-})
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
+
+vim.o.splitright = true
+vim.o.splitbelow = true
+
+vim.o.list = true
+vim.opt.listchars = { tab = "> ", trail = ".", nbsp = "_" }
+
+vim.o.inccommand = "split"
+
+vim.o.cursorline = true
+
+vim.o.scrolloff = 10
+
+vim.o.confirm = true
+

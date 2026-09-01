@@ -1,0 +1,13 @@
+require "junicus.plugins.guess-indent"
+require "junicus.plugins.gitsigns"
+require "junicus.plugins.which-key"
+require "junicus.plugins.tokyonight"
+require "junicus.plugins.todo-comments"
+require "junicus.plugins.mini"
+require "junicus.plugins.neo-tree"
+require "junicus.plugins.telescope"
+require "junicus.plugins.lspconfig"
+require "junicus.plugins.conform"
+require "junicus.plugins.blink-cmp"
+require "junicus.plugins.treesitter"
+
